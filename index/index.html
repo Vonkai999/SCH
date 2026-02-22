@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Dance Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">SHC</div>
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#styles">Направления</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Студия танца<br><span>be confident</span></h1>
+        <button onclick="scrollToSection('contact')">Записаться</button>
+    </div>
+</section>
+
+<section id="about" class="section about">
+    <div class="text">
+        <h2>ДНК студии</h2>
+        <p>
+            Я создаю пространство, где каждая девушка чувствует уверенность, 
+            раскрывает женственность и влюбляется в своё тело.
+        </p>
+    </div>
+    <div class="image">
+        <img src="https://images.unsplash.com/photo-1518611012118-fdd7f0d5b2b0" alt="Dance">
+    </div>
+</section>
+
+<section id="styles" class="section styles">
+    <h2>Выбери своё направление</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524594227088-6f8a2f6fdbef" alt="">
+            <h3>High Heels</h3>
+            <p>Женственный стиль, уверенность и пластика.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508704019882-f9cf40e475b4" alt="">
+            <h3>Stretching</h3>
+            <p>Гибкость, растяжка и мягкая работа с телом.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff" alt="">
+            <h3>Choreo</h3>
+            <p>Хореография под современные треки.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="faq" class="section faq">
+    <h2>Ответы на вопросы</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">Можно ли новичкам?</button>
+        <div class="faq-answer">Да! У нас есть группы для начинающих.</div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Нужна ли специальная форма?</button>
+        <div class="faq-answer">Комфортная одежда и каблуки для heels.</div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Сколько длится занятие?</button>
+        <div class="faq-answer">Обычно 60–75 минут.</div>
+    </div>
+
+</section>
+
+<section id="contact" class="section contact">
+    <h2>Связь с нами</h2>
+    <p>г. Вроцлав</p>
+
+    <div class="buttons">
+        <a href="#" class="btn">Instagram</a>
+        <a href="#" class="btn">Telegram</a>
+        <a href="#" class="btn">WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Dance Studio
+</footer>
+
+<button id="backToTopBtn" aria-label="Наверх" style="display:none">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="16" fill="#7a0c1f"/>
+        <polyline points="10,19 16,13 22,19" stroke="black" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
