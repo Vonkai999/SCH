@@ -111,35 +111,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })();
-#scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
 
-  background-color: #5b0f1a;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  let scrollTimeout;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  function showButton() {
+    scrollBtn.classList.add("show");
+  }
 
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, transform 0.3s ease;
-}
+  function hideButton() {
+    scrollBtn.classList.remove("show");
+  }
 
-#scrollTopBtn.show {
-  opacity: 1;
-  visibility: visible;
-}
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
 
-#scrollTopBtn:hover {
-  transform: scale(1.1);
-}
+    // Если вверху страницы — скрыть кнопку
+    if (scrollTop === 0) {
+      hideButton();
+      return;
+    }
+
+    // Показать кнопку при скролле
+    showButton();
+
+    // Сброс таймера
+    clearTimeout(scrollTimeout);
+
+    // Скрыть кнопку через 2 секунды без скролла
+    scrollTimeout = setTimeout(() => {
+      hideButton();
+    }, 2000);
+  });
+
+  // Плавная прокрутка вверх
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
